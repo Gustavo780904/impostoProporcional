@@ -24,11 +24,11 @@ public class impostoProporcional {
 			System.out.println();
 			
 			
-			if (renda >= 36000.00 && renda <= 60000.00) {
+			if (renda >= 36000.00 && renda < 60000.00) {
 				impostoSal = (renda - 36000.00) * 0.1;
 			}
-			else if (renda > 60.000) {
-				impostoSal = (renda * 0.2) + 2400.00;
+			else if (renda >= 60.000) {
+				impostoSal = (renda - 60000.00) * 0.2 + 2400.00;
 			}
 			else {
 				impostoSal = 0.0;
@@ -36,7 +36,6 @@ public class impostoProporcional {
 			impostoServ = servico * 0.15;
 			impostoGc = capital * 0.20;
 			
-			System.out.println();
 			System.out.println("CONSOLIDADO DE RENDA:");
 			System.out.println("Imposto sobre salário: " + impostoSal);
 			System.out.println("Imposto sobre serviços: " + impostoServ);
